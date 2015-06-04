@@ -19,5 +19,15 @@ module Mailapp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    ActionMailer::Base.smtp_settings = {
+        :address            => 'smtp.gmail.com',
+        :domain             => 'mail.google.com',
+        :port               => 587,
+        :user_name          => "liuloliula@gmail.com",
+        :password           => "idontknow!!",
+        :authentication     => 'login',
+        :enable_startls_auto => true
+    }
   end
 end
